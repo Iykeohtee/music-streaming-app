@@ -4,10 +4,12 @@ import Link from 'next/link'
 
 const login = () => {
   return (
-    <div>
-      login into your account
+    <div className='w-[887px] h-[690px] flex flex-col justify-center items-center'>
+      <h1>login into your account</h1>
       <LoginForm/> 
-      Don't have an account? <Link href="/signup">SignUp</Link>
+     <h2 className='text-[gray]'>
+      Don't have an account? <Link href="/signup" className='underline text-[white]'>SignUp</Link>
+     </h2>
     </div>
   )
 }

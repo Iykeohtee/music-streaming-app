@@ -38,7 +38,7 @@ const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
          placeholder="enter email"        
          value={formData.email}
          onChange={handleChange}
-         className={inputText.length > 0 ? 'text-white' : 'text-default'}   
+         className={inputText.length > 0 ? 'text-white' : 'text-default'}    
         />   
         </div>
 
