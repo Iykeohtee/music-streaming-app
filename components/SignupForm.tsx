@@ -10,6 +10,10 @@ const SignupForm = () => {
     password: ''
  })     
 
+  const email = formData.email;
+  const name = formData.username;
+  const password = formData.password; 
+
   const [ isPasswordVisible, setIsPasswordVisible ] = useState(false); 
   const [ inputText, setInputText ] = useState('');
 
@@ -19,12 +23,25 @@ const SignupForm = () => {
 
 const handleChange = (e: ChangeEvent<HTMLInputElement>) => {    
     setFormData({...formData, [e.target.name]: e.target.value});
-    setInputText(e.target.value);     
+    setInputText(e.target.value);
 }
 
-   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {             
-      e.preventDefault(); 
-   }
+   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {      
+                 
+      e.preventDefault();    
+
+      const response = await fetch('/api/signup', {    
+         method: 'POST',
+         body: JSON.stringify({ name, email, password }),    
+         headers: {
+           'Content-Type': 'application/json',
+         },
+       });
+   
+       const data = await response.json();
+       console.log(data);    
+
+   }   
 
    
 

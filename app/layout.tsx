@@ -5,7 +5,7 @@ import "./globals.css";
 const poppins = Poppins({ 
   subsets: ["latin"],
   variable: "--my-font-family",   
-  weight: ["400", "500", "600", "700", "800", "900"]  
+  weight: ["400", "500", "600", "700", "800", "900"]        
  });
 
 export const metadata: Metadata = {
@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={poppins.className}> 
+      <body className={poppins.className}>                     
         {children}  
       </body> 
     </html>

@@ -20,12 +20,20 @@ const LoginForm = () => {
    const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
       e.preventDefault();
 
-      try{
-        const response = await fetch('api/register', {
-          m
-        }
-        )
-      }
+      // try{
+      //   const response = await fetch('api/register', 
+      //    {
+      //     method: 'POST',
+      //     headers: { 
+      //       'Content-Type' : 'application/json',
+      //     },
+      //     body: JSON.stringify({
+      //       username, 
+      //       password 
+      //     })
+      //    }
+      //   )
+      // }
 
    }
 

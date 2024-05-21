@@ -8,7 +8,7 @@ const poppins = Poppins({
     weight: ["400", "500", "600", "700", "800", "900"]  
    });
  
-export default function MyApp({ Component, pageProps }) {
+export default function MyApp({ Component, pageProps }) {   
     return (
         // Apply the font variable globally
         <div className={poppins.className}> 
